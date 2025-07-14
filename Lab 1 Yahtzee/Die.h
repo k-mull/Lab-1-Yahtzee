@@ -1,23 +1,13 @@
-#ifndef DIE
-#define DIE
-#include <iostream>
-using namespace std;
-class Die
+#ifndef DIE_H
+#define DIE_H
+class Die 
 {
 private:
-	int numberOfSides;
-	int faceValue;
+    int sides;
+    int value;
 public:
-	// Constructor
-	Die();
-	Die(int numSides, int fVal);
-	void setNumberOfSides(int numSides);
-	void setFaceValue(int fVal);
-	int getNumberOfSides() const;
-	int getFaceValue() const;
-	void roll();
-	string describeDie();
+    Die(int sides = 6);
+    void roll();
+    int getValue() const;
 };
-
-
-#endif DIE
+#endif

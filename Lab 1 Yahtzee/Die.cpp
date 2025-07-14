@@ -1,38 +1,19 @@
 #include "Die.h"
-#include <iostream>
-#include <string>
 #include <cstdlib>
 #include <ctime>
-void Die::setNumberOfSides(int numSides)
+#include<iostream>
+using namespace std;
+Die::Die(int sides) : sides(sides), value(1)
 {
-	numberOfSides = numSides;
+    srand(time(0));
 }
-void Die::setFaceValue(int fVal)
+
+void Die::roll() 
 {
-	faceValue = fVal;
+    value = rand() % sides + 1;
 }
-int Die::getNumberOfSides() const
+
+int Die::getValue() const 
 {
-	return numberOfSides;
-}
-int Die::getFaceValue() const
-{
-	return faceValue;
-}
-void Die::roll()
-{
-	faceValue = (rand() % (numberOfSides - 1 + 1) + 1);
-}
-string Die::describeDie()
-{
-	return "The value of the Die is " + to_string(faceValue);
-}
-//added constructor
-Die::Die()
-{
-	numberOfSides = 6;
-	faceValue = 6;
-}
-Die::Die(int numSides, int fVal) : numberOfSides(numSides), faceValue(fVal)
-{
+    return value;
 }
