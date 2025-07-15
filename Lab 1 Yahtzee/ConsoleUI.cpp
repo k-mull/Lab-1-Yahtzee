@@ -4,7 +4,6 @@
 using namespace std;
 void ConsoleUI::displayDice(const int faceValues[5]) 
 {
-
     cout << "Dice:" << endl; 
     for (int i = 0; i < 5; i++)
     cout << "#" << (i + 1)  << " has the value of " << faceValues[i] << "\n";
@@ -13,11 +12,13 @@ void ConsoleUI::displayDice(const int faceValues[5])
 
 void ConsoleUI::getDiceToRoll(bool toRoll[5], int rollNumber)
 {
-    cout << "Roll " << (rollNumber + 2) << endl;
+    //cout << "Roll " << (rollNumber + 1) << endl;
 
   
-    for (int i = 0; i < 5; ++i)
-        toRoll[i] = false;
+  //  for (int i = 0; i < 5; ++i)
+       // toRoll[i] = false;
+
+   // cout << "Roll " << (rollNumber + 1) << endl;
 
     cout << "Enter dice numbers (1-5) one at a time to reroll." << endl;
     cout << "Enter 0 when you're done choosing." << endl;

@@ -32,7 +32,7 @@ void GameLogic::playGame()
     for (int catNum = 0; catNum < 6; catNum++) 
     {
         bool toRoll[5] = { true, true, true, true, true };
-
+        
   
         for (int rounds = 0; rounds < 3; rounds++)
         {
