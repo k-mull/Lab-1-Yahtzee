@@ -10,23 +10,20 @@ void ConsoleUI::displayDice(const int faceValues[5])
     cout << endl; 
 }
 
-void ConsoleUI::getDiceToRoll(bool toRoll[5], int rollNumber)
+void ConsoleUI::getDiceToRoll(bool toRoll[5])
 {
     //cout << "Roll " << (rollNumber + 1) << endl;
 
-  
-  //  for (int i = 0; i < 5; ++i)
-       // toRoll[i] = false;
+  for (int i = 0; i < 5; ++i)
+        toRoll[i] = false;
 
-   // cout << "Roll " << (rollNumber + 1) << endl;
-
-    cout << "Enter dice numbers (1-5) one at a time to reroll." << endl;
+    cout << "Enter dice numbers (1-5) one at a time to reroll or enter 0 to keep all." << endl;
     cout << "Enter 0 when you're done choosing." << endl;
 
     int choice;
     while (true) 
     {
-        cout << "Die number to reroll (1-5 or 0 to finish): ";
+        cout << "Die number to reroll (1-5 or 0 to finish/keep all): ";
         cin >> choice;
 
         if (choice == 0)

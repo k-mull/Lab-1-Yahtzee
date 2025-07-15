@@ -6,6 +6,7 @@ GameLogic::GameLogic()
     {
         scores[i] = 0;
         usedCategories[i] = false;
+     
     }
 }
 
@@ -42,8 +43,8 @@ void GameLogic::playGame()
                 values[i] = dice[i].getValue();
             ui.displayDice(values);
 
-            if (rounds < 2)
-                ui.getDiceToRoll(toRoll, rounds);
+           if (rounds < 2)
+               ui.getDiceToRoll(toRoll);
         }
 
         ui.displayScoreTable(scores, usedCategories);

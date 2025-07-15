@@ -3,13 +3,22 @@
 #include <ctime>
 #include<iostream>
 using namespace std;
-Die::Die(int sides) : sides(sides), value(1)
+Die::Die()
 {
-    srand(time(0));
+    sides = 6;
+    value = 1;
+}
+
+Die::Die(int Numsides, int fVal) : sides(Numsides), value(fVal)
+{
+
+  
 }
 
 void Die::roll() 
 {
+
+
     value = rand() % sides + 1;
 }
 
