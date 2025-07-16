@@ -26,3 +26,15 @@ int Die::getValue() const
 {
     return value;
 }
+int Die::getSides() const
+{
+    return sides;
+}
+void Die::setSides()
+{
+    this->sides = sides;
+}
+void Die::setValue()
+{
+    this->value = value;
+}

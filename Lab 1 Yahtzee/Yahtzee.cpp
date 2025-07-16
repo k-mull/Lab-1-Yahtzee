@@ -6,11 +6,11 @@
 
 int main() 
 {
-    srand(time(0));
+    srand(time(0)); //need for random number generator
 
    
-        GameLogic mygame;
-        mygame.playGame();
+        GameLogic mygame; //creates instance of gamelogic
+        mygame.playGame(); //starts game
     
    
 }
